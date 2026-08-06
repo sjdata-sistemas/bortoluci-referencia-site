@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bortoluci Referência — contratação, gestão e experiências musicais para eventos, festivais e shows." />
+  <title>Bortoluci Referência | Música que marca</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Efeito de ruído sutil no fundo -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- INTRO SCREEN / PRELOADER ESTILO GR6 & LOVE FUNK -->
+  <div id="intro-screen" class="intro-screen">
+    <div class="intro-content">
+      <!-- Fase 1: Logo da Empresa -->
+      <div class="intro-phase phase-1 active" id="phase-1">
+        <div class="intro-logo-wrap">
+          <img src="assets/logo-bortoluci.png" alt="Bortoluci Referência" class="intro-logo" />
+        </div>
+      </div>
+
+      <!-- Fase 2: Parceiros Oficiais & Selos (Love Funk, Sub 17 Music, GR6, etc.) -->
+      <div class="intro-phase phase-2" id="phase-2">
+        <p class="intro-eyebrow">// PARCEIROS &amp; REDE DE CASTING</p>
+        <h3 class="intro-partners-title">CONEXÃO COM OS MAIORES SELOS</h3>
+        <div class="partner-logos-grid">
+          <div class="partner-logo-item">
+            <img src="assets/love-funk-logo.png" alt="Love Funk" class="partner-logo-img" />
+          </div>
+          <div class="partner-logo-item">
+            <img src="assets/sub-17-music-logo.png" alt="Sub 17 Music" class="partner-logo-img" />
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://horizons-cdn.hostinger.com/67b99462-0b8b-40fb-add0-e86801ed0a4f/7a711dd7f7fe0de54ac90cbc8c6a1e0b.webp" alt="GR6 Eventos" class="partner-logo-img" />
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://horizons-cdn.hostinger.com/67b99462-0b8b-40fb-add0-e86801ed0a4f/075161488695a1c3aae54bae0103406d.png" alt="Bololo Records" class="partner-logo-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão Pular -->
+    <button type="button" class="intro-skip" id="intro-skip" aria-label="Pular apresentação">
+      Pular Apresentação <span>✕</span>
+    </button>
+
+    <!-- Barra de Progresso do Carregamento -->
+    <div class="intro-progress">
+      <div class="intro-progress-bar" id="intro-progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Header Oficial Bortoluci -->
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Bortoluci Referência - início">
+      <img src="assets/logo-bortoluci.png" alt="Bortoluci Referência" />
+    </a>
+    
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#catalogo">Artistas &amp; Catálogo</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#sobre">A agência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="header-cta" href="#contato">
+      Contrate agora <span>→</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- HERO SECTION OFICIAL -->
+    <section class="hero" id="inicio">
+      <div class="hero-media">
+        <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-show.jfif" aria-label="Vídeo de apresentação de show ao vivo">
+          <source id="hero-video-source" src="assets/hero-lovefunk.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <p class="eyebrow hero-kicker">Booking · Música · Eventos</p>
+
+      <div class="hero-container">
+        <p class="hero-index">01 / 04</p>
+        <h1 class="hero-title">
+          O SOM<br />
+          <em class="highlight-acid">DO SEU</em><br />
+          EVENTO.
+        </h1>
+
+        <div class="hero-actions">
+          <p class="hero-subtitle">
+            Conectamos artistas, palcos e públicos em experiências que ficam na memória.
+          </p>
+          <a class="round-link" href="#catalogo" aria-label="Conhecer catálogo">→</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">+500</span>
+            <span class="stat-label">Shows Realizados</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">+100</span>
+            <span class="stat-label">Artistas no Casting</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Cobertura Nacional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>REFERÊNCIA EM ENTRETENIMENTO ✦ BOOKING DE ARTISTAS ✦ EVENTOS QUE MARCAM ✦ BORTOLUCI REFERÊNCIA ✦ REFERÊNCIA EM ENTRETENIMENTO ✦ BOOKING DE ARTISTAS ✦ EVENTOS QUE MARCAM ✦ BORTOLUCI REFERÊNCIA ✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO INTERATIVO COMPLETO -->
+    <section class="catalogue-section section" id="catalogo">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Todos os estilos, um só time</p>
+          <h2 class="section-title">CATÁLOGO COMPLETO <span class="highlight-acid">2026</span></h2>
+        </div>
+        <div class="catalogue-search-wrapper">
+          <label for="artist-search" class="visually-hidden">Buscar artista</label>
+          <div class="search-input-group">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input id="artist-search" type="search" placeholder="Digite um nome..." autocomplete="off" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Abas de Filtro de Categoria -->
+      <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Categorias de artistas">
+        <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">Todos os Artistas</button>
+        <button class="tab-btn" data-category="MC's Atrações de Funk" role="tab">MC's Funk</button>
+        <button class="tab-btn" data-category="DJ's Atrações de Funk" role="tab">DJ's Funk</button>
+        <button class="tab-btn" data-category="Trap Atrações" role="tab">Trap</button>
+        <button class="tab-btn" data-category="Pagode" role="tab">Pagode</button>
+        <button class="tab-btn" data-category="Piseiro" role="tab">Piseiro</button>
+        <button class="tab-btn" data-category="DJ's Balada" role="tab">DJ's Balada</button>
+        <button class="tab-btn" data-category="DJ's Eletrônica" role="tab">Eletrônica</button>
+      </div>
+
+      <div id="catalogue-results" class="catalogue-results" aria-live="polite"></div>
+    </section>
+
+    <!-- DESTAQUES & SERVIÇOS (FUNDO AMARELO ÁCIDO BORTOLUCI) -->
+    <section class="spotlight section" id="destaques">
+      <div class="section-head">
+        <p class="eyebrow">No volume máximo</p>
+        <p class="section-number">03 / 04</p>
+      </div>
+
+      <div class="spotlight-layout">
+        <div>
+          <h2 class="section-title">
+            O PRÓXIMO<br />
+            GRANDE<br />
+            <span>MOMENTO</span><br />
+            COMEÇA AQUI.
+          </h2>
+          <a class="btn btn-ink" href="#contato">Planejar meu evento <span>→</span></a>
+        </div>
+
+        <div class="service-list">
+          <article>
+            <span class="service-num">01</span>
+            <h3>CONTRATAÇÃO<br />DE ARTISTAS</h3>
+            <p>O nome certo para criar a energia que o seu evento pede.</p>
+          </article>
+          <article>
+            <span class="service-num">02</span>
+            <h3>CURADORIA<br />MUSICAL</h3>
+            <p>Line-ups pensados para o público, a marca e o momento.</p>
+          </article>
+          <article>
+            <span class="service-num">03</span>
+            <h3>PRODUÇÃO<br />DE EXPERIÊNCIAS</h3>
+            <p>Do briefing ao palco, com atenção a cada detalhe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A AGÊNCIA -->
+    <section class="about section" id="sobre">
+      <div class="about-stripe" aria-hidden="true">
+        <div class="about-stripe-track">
+          <span>BORTOLUCI REFERÊNCIA ✦ EXCELÊNCIA EM BOOKING ✦ CURADORIA MUSICAL ✦ BORTOLUCI REFERÊNCIA ✦ EXCELÊNCIA EM BOOKING ✦ CURADORIA MUSICAL ✦ BORTOLUCI REFERÊNCIA ✦ EXCELÊNCIA EM BOOKING ✦ CURADORIA MUSICAL ✦</span>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">Sobre nós</p>
+          <h2 class="section-title">A REFERÊNCIA<br />QUE O SEU EVENTO<br /><span class="highlight-acid">MERECE.</span></h2>
+        </div>
+
+        <div class="about-text">
+          <p class="lead">
+            A Bortoluci Referência aproxima talentos, marcas e eventos. Somos uma agência para quem acredita que música não é fundo: é presença.
+          </p>
+          <p>
+            Trabalhamos com agilidade, curadoria e uma rede de artistas preparada para entregar experiências inesquecíveis em todo o país.
+          </p>
+
+          <div class="about-facts">
+            <span class="fact-tag">Booking de Artistas</span>
+            <span class="fact-tag">Curadoria de Line-ups</span>
+            <span class="fact-tag">Eventos Corporativos &amp; Sociais</span>
+            <span class="fact-tag">Festivais &amp; Shows</span>
+          </div>
+
+          <br />
+          <a href="#contato" class="text-link">Fale com nossa equipe <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO (FUNDO LARANJA VIBRANTE BORTOLUCI) -->
+    <section class="contact section" id="contato">
+      <div>
+        <p class="eyebrow">Vamos conversar</p>
+        <h2 class="section-title">QUAL É O<br />SEU <span>EVENTO?</span></h2>
+        <p class="contact-desc">
+          Conte o que você imagina. Nossa equipe retorna rapidamente com as melhores possibilidades para o seu palco.
+        </p>
+
+        <a href="https://wa.me/5511983463193" target="_blank" rel="noopener" class="direct-card">
+          <span>Atendimento direto via WhatsApp: (11) 98346-3193 ↗</span>
+        </a>
+      </div>
+
+      <div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="form-nome">Seu nome</label>
+
+            <input id="form-nome" required name="nome" placeholder="Como podemos te chamar?" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-whatsapp">WhatsApp</label>
+
+              <input id="form-whatsapp" required name="whatsapp" placeholder="(00) 00000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-evento">Tipo de evento</label>
+              <select id="form-evento" name="evento">
+                <option value="Show / Festival">Show / Festival</option>
+                <option value="Evento corporativo">Evento corporativo</option>
+                <option value="Festa particular">Festa particular</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-mensagem">Mensagem</label>
+            <textarea id="form-mensagem" name="mensagem" placeholder="Data, cidade, artista ou ideia do evento."></textarea>
+          </div>
+
+          <button class="btn btn-submit" type="submit">
+            Enviar solicitação <span>→</span>
+          </button>
+
+          <p class="form-note" id="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- SEÇÃO PARCEIROS OFICIAIS -->
+    <section class="partners-section section">
+      <div class="section-head justify-center">
+        <p class="eyebrow">// PARCEIROS &amp; REDE DE CASTING OFICIAL</p>
+      </div>
+      <div class="partners-bar">
+        <img src="assets/love-funk-logo.png" alt="Love Funk" class="partner-bar-img" />
+        <img src="assets/sub-17-music-logo.png" alt="Sub 17 Music" class="partner-bar-img" />
+        <img src="https://horizons-cdn.hostinger.com/67b99462-0b8b-40fb-add0-e86801ed0a4f/7a711dd7f7fe0de54ac90cbc8c6a1e0b.webp" alt="GR6 Eventos" class="partner-bar-img" />
+        <img src="https://horizons-cdn.hostinger.com/67b99462-0b8b-40fb-add0-e86801ed0a4f/075161488695a1c3aae54bae0103406d.png" alt="Bololo Records" class="partner-bar-img" />
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/logo-bortoluci.png" alt="Bortoluci Referência" />
+    </div>
+
+    <div class="footer-links">
+      <a href="#inicio">Início</a>
+      <a href="#catalogo">Artistas &amp; Catálogo</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#sobre">A agência</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <p class="footer-info">
+      © <span id="year">2026</span> Bortoluci Referência.<br />
+      Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="catalog.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
