@@ -293,7 +293,25 @@ body {
   filter: contrast(1.1) brightness(1.18) saturate(1.2);
   image-rendering: -webkit-optimize-contrast;
   transform: translate3d(0, 0, 0);
+  transition: opacity 1s ease-in-out;
   will-change: opacity, transform;
+}
+
+.hero-image-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out, transform 7s ease-out;
+  transform: scale(1.04);
+  z-index: 1;
+}
+
+.hero-image-slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero-overlay {
@@ -304,6 +322,50 @@ body {
     linear-gradient(180deg, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.1) 45%, rgba(10, 10, 10, 0.65) 100%),
     radial-gradient(circle at center, transparent 30%, rgba(10, 10, 10, 0.5) 100%);
   pointer-events: none;
+}
+
+.hero-badge-wrap {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.hero-channel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--acid);
+  color: var(--paper);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-channel-badge:hover {
+  background: var(--acid);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.yt-dot {
+  display: inline-block;
+  animation: pulseBlink 1.5s infinite;
+}
+
+@keyframes pulseBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
 }
 
 .hero-container {

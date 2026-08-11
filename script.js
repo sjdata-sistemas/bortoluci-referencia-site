@@ -197,32 +197,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Rotação Automática dos Vídeos de Apresentação Oficial em Loop (Love Funk & GR6 Eventos)
+  // 5. Compacto do Canal Bortoluci Referência (Rotação em Loop de Vídeos & Imagens dos Shows)
   const heroVideo = document.getElementById('hero-video');
   const heroVideoSource = document.getElementById('hero-video-source');
+  const heroImageSlide = document.getElementById('hero-image-slide');
 
-  if (heroVideo && heroVideoSource) {
-    const playlist = [
-      { src: 'assets/hero-lovefunk.mp4', type: 'video/mp4' },
-      { src: 'assets/hero-gr6.webm', type: 'video/webm' }
+  if (heroVideo && heroVideoSource && heroImageSlide) {
+    const reel = [
+      { type: 'video', src: 'assets/hero-lovefunk.mp4', mediaType: 'video/mp4' },
+      { type: 'image', src: 'assets/bortoluci-show-1.jpg' },
+      { type: 'video', src: 'assets/hero-gr6.webm', mediaType: 'video/webm' },
+      { type: 'image', src: 'assets/bortoluci-show-2.jpg' }
     ];
-    let currentVideoIndex = 0;
+    let currentIndex = 0;
+    let imageTimer = null;
 
-    // Remove o atributo 'loop' nativo para que o evento 'ended' seja disparado e alterne a playlist
-    heroVideo.removeAttribute('loop');
+    function playReelItem(index) {
+      clearTimeout(imageTimer);
+      const item = reel[index];
 
-    heroVideo.addEventListener('ended', () => {
-      currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
-      const nextVideo = playlist[currentVideoIndex];
-
-      heroVideo.style.opacity = '0.7';
-      setTimeout(() => {
-        heroVideoSource.setAttribute('src', nextVideo.src);
-        heroVideoSource.setAttribute('type', nextVideo.type);
+      if (item.type === 'video') {
+        heroImageSlide.classList.remove('active');
+        heroVideo.style.opacity = '1';
+        heroVideoSource.setAttribute('src', item.src);
+        heroVideoSource.setAttribute('type', item.mediaType);
         heroVideo.load();
         heroVideo.play().catch(() => {});
-        heroVideo.style.opacity = '1';
-      }, 150);
-    });
+      } else {
+        heroVideo.style.opacity = '0';
+        heroImageSlide.style.backgroundImage = `url('${item.src}')`;
+        heroImageSlide.classList.add('active');
+
+        // Para imagens de alta definição, avança após 6.5 segundos
+        imageTimer = setTimeout(nextReelItem, 6500);
+      }
+    }
+
+    function nextReelItem() {
+      currentIndex = (currentIndex + 1) % reel.length;
+      playReelItem(currentIndex);
+    }
+
+    heroVideo.removeAttribute('loop');
+    heroVideo.addEventListener('ended', nextReelItem);
   }
 });
