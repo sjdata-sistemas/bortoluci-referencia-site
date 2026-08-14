@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BORTOLUCI REFERÊNCIA — IDENTIDADE VISUAL REAL & AUTÊNTICA
-   Cores Oficiais: Ink (#0a0a0a), Paper (#e8e6dc), Acid (#d9ff38), Orange (#f04d25)
+   BORTOLUCI REFERÊNCIA — IDENTIDADE VISUAL PRETO & DOURADO (GOLD & BLACK)
+   Cores Oficiais: Ink (#0a0a0a), Paper (#e8e6dc), Gold (#D4AF37), Orange (#f04d25)
    ========================================================================== */
 
 :root {
@@ -8,8 +8,10 @@
   --ink-card: #141414;
   --ink-card-hover: #1c1c1c;
   --paper: #e8e6dc;
-  --acid: #d9ff38;
-  --acid-glow: rgba(217, 255, 56, 0.35);
+  --gold: #D4AF37;
+  --gold-hover: #F3D06C;
+  --acid: #D4AF37;
+  --acid-glow: rgba(212, 175, 55, 0.35);
   --orange: #f04d25;
   --orange-glow: rgba(240, 77, 37, 0.4);
   --line: rgba(232, 230, 220, 0.2);
@@ -155,7 +157,7 @@ body {
 }
 
 .btn-acid:hover {
-  background: #e5ff5e;
+  background: var(--gold-hover);
   box-shadow: 0 4px 25px var(--acid-glow);
   transform: translateY(-2px);
 }
@@ -240,7 +242,7 @@ body {
 }
 
 .header-cta:hover {
-  background: #e5ff5e;
+  background: var(--gold-hover);
   transform: scale(1.03);
 }
 
