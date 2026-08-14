@@ -1,21 +1,22 @@
 /* ==========================================================================
-   BORTOLUCI REFERÊNCIA — IDENTIDADE VISUAL PRETO & DOURADO (GOLD & BLACK)
-   Cores Oficiais: Ink (#0a0a0a), Paper (#e8e6dc), Gold (#D4AF37), Orange (#f04d25)
+   BORTOLUCI REFERÊNCIA — IDENTIDADE VISUAL PRETO & DOURADO OFICIAL 2026
+   Cores Oficiais Cartaz: Ink (#0a0a0a), Paper (#e8e6dc), Gold (#F1B51C), Gold Bright (#FFC72C)
    ========================================================================== */
 
 :root {
   --ink: #0a0a0a;
   --ink-card: #141414;
   --ink-card-hover: #1c1c1c;
-  --paper: #e8e6dc;
-  --gold: #D4AF37;
-  --gold-hover: #F3D06C;
-  --acid: #D4AF37;
-  --acid-glow: rgba(212, 175, 55, 0.35);
+  --paper: #ffffff;
+  --gold: #F1B51C;
+  --gold-bright: #FFC72C;
+  --gold-hover: #FFD54F;
+  --acid: #F1B51C;
+  --acid-glow: rgba(241, 181, 28, 0.4);
   --orange: #f04d25;
   --orange-glow: rgba(240, 77, 37, 0.4);
-  --line: rgba(232, 230, 220, 0.2);
-  --line-strong: rgba(232, 230, 220, 0.4);
+  --line: rgba(255, 255, 255, 0.15);
+  --line-strong: rgba(241, 181, 28, 0.4);
 
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -719,13 +720,18 @@ body {
 }
 
 .catalogue-group h4 {
+  display: inline-block;
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.35rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--acid);
-  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  background: var(--gold);
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 20px var(--acid-glow);
 }
 
 .name-grid {
