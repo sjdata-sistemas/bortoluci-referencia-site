@@ -915,6 +915,147 @@ body {
 }
 
 /* ==========================================================================
+   PROGRAMA PARA CERIMONIALISTAS & ASSESSORIAS
+   ========================================================================== */
+
+.cerimonialistas {
+  background: var(--ink-card);
+  border-top: 1px solid var(--line);
+  padding: 110px 5vw;
+}
+
+.cerimonialistas-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6vw;
+  align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.cerimonialistas-info .lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--paper);
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.cerimonialistas-desc {
+  color: rgba(232, 230, 220, 0.75);
+  margin-bottom: 32px;
+  font-size: 0.98rem;
+}
+
+.cerimonialistas-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: var(--transition-fast);
+}
+
+.feature-card:hover {
+  border-color: var(--acid);
+  background: rgba(217, 255, 56, 0.04);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.feature-card strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  margin-bottom: 2px;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: rgba(232, 230, 220, 0.7);
+  margin: 0;
+}
+
+.cerimonialistas-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.cerimonialistas-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cerimonialistas-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9) contrast(1.1);
+  transition: var(--transition-normal);
+}
+
+.cerimonialistas-media:hover .cerimonialistas-img {
+  transform: scale(1.04);
+  filter: brightness(1);
+}
+
+.cerimonialistas-card-float {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--acid);
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.float-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--acid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.cerimonialistas-card-float p {
+  font-size: 0.88rem;
+  color: var(--paper);
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .cerimonialistas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    CONTATO (FUNDO LARANJA VIBRANTE REAL BORTOLUCI)
    ========================================================================== */
 
