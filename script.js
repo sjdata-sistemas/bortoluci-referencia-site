@@ -181,9 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = contactForm.elements['nome'].value.trim();
       const phone = contactForm.elements['whatsapp'].value.trim();
       const eventType = contactForm.elements['evento'].value;
+      const cerimonialista = contactForm.elements['cerimonialista'] ? contactForm.elements['cerimonialista'].value.trim() : '';
       const message = contactForm.elements['mensagem'].value.trim();
 
-      const text = `Olá, equipe Bortoluci Referência!\n\nMeu nome é: *${name}*\nWhatsApp: *${phone}*\nTipo de Evento: *${eventType}*\n\n*Detalhes / Artista:* ${message || 'Gostaria de consultar disponibilidade e orçamento para meu evento.'}`;
+      let text = `Olá, equipe Bortoluci Referência!\n\nMeu nome é: *${name}*\nWhatsApp: *${phone}*\nTipo de Evento: *${eventType}*`;
+      if (cerimonialista) {
+        text += `\nCerimonialista / Assessoria: *${cerimonialista}*`;
+      }
+      text += `\n\n*Detalhes / Artista:* ${message || 'Gostaria de consultar disponibilidade e orçamento para meu evento.'}`;
 
       const whatsappUrl = `https://wa.me/5511983463193?text=${encodeURIComponent(text)}`;
       
