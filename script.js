@@ -202,48 +202,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Compacto do Canal Bortoluci Referência (Rotação em Loop de Vídeos & Imagens dos Shows)
+  // 5. Hero — Rotação Contínua de Vídeos do Canal @bortolucireferencia (Sem Imagens)
   const heroVideo = document.getElementById('hero-video');
   const heroVideoSource = document.getElementById('hero-video-source');
-  const heroImageSlide = document.getElementById('hero-image-slide');
 
-  if (heroVideo && heroVideoSource && heroImageSlide) {
-    const reel = [
-      { type: 'video', src: 'assets/hero-lovefunk.mp4', mediaType: 'video/mp4' },
-      { type: 'image', src: 'assets/bortoluci-show-1.jpg' },
-      { type: 'video', src: 'assets/hero-gr6.webm', mediaType: 'video/webm' },
-      { type: 'image', src: 'assets/bortoluci-show-2.jpg' }
+  if (heroVideo && heroVideoSource) {
+    const videoReel = [
+      { src: 'assets/hero-bortoluci-1.mp4', type: 'video/mp4' },
+      { src: 'assets/hero-lovefunk.mp4',    type: 'video/mp4' },
+      { src: 'assets/hero-bortoluci-2.mp4', type: 'video/mp4' },
+      { src: 'assets/hero-gr6.webm',        type: 'video/webm' }
     ];
     let currentIndex = 0;
-    let imageTimer = null;
 
-    function playReelItem(index) {
-      clearTimeout(imageTimer);
-      const item = reel[index];
-
-      if (item.type === 'video') {
-        heroImageSlide.classList.remove('active');
-        heroVideo.style.opacity = '1';
-        heroVideoSource.setAttribute('src', item.src);
-        heroVideoSource.setAttribute('type', item.mediaType);
-        heroVideo.load();
-        heroVideo.play().catch(() => {});
-      } else {
-        heroVideo.style.opacity = '0';
-        heroImageSlide.style.backgroundImage = `url('${item.src}')`;
-        heroImageSlide.classList.add('active');
-
-        // Para imagens de alta definição, avança após 6.5 segundos
-        imageTimer = setTimeout(nextReelItem, 6500);
-      }
-    }
-
-    function nextReelItem() {
-      currentIndex = (currentIndex + 1) % reel.length;
-      playReelItem(currentIndex);
+    function playNextVideo() {
+      currentIndex = (currentIndex + 1) % videoReel.length;
+      const next = videoReel[currentIndex];
+      heroVideoSource.setAttribute('src', next.src);
+      heroVideoSource.setAttribute('type', next.type);
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
     }
 
     heroVideo.removeAttribute('loop');
-    heroVideo.addEventListener('ended', nextReelItem);
+    heroVideo.addEventListener('ended', playNextVideo);
   }
 });
