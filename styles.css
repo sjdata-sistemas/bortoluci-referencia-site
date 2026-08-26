@@ -79,14 +79,15 @@ body {
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--gold) !important;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   opacity: 1 !important;
+  display: block;
 }
 
 .section-number {
@@ -1506,6 +1507,22 @@ textarea {
   color: var(--paper);
   padding: 60px 5vw;
   border-top: 1px solid var(--line);
+}
+
+.partners-section .eyebrow,
+.cerimonialistas .eyebrow,
+.about-company .eyebrow {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--gold) !important;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+  opacity: 1 !important;
+  line-height: 1.1;
+  text-shadow: 0 0 25px rgba(241, 181, 28, 0.3);
 }
 
 .justify-center {
