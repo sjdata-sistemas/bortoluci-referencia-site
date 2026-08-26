@@ -923,6 +923,45 @@ body {
 }
 
 /* ==========================================================================
+   SOBRE NOSSA EMPRESA
+   ========================================================================== */
+
+.about-company {
+  background: var(--ink);
+  border-top: 1px solid var(--line);
+  padding: 100px 5vw;
+}
+
+.about-company-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 6vw;
+  align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-company-content .lead {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: var(--paper);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.about-company-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    PROGRAMA PARA CERIMONIALISTAS & ASSESSORIAS
    ========================================================================== */
 
