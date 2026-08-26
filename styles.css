@@ -23,7 +23,7 @@
   --font-body: 'Manrope', sans-serif;
 
   --container-max: 1320px;
-  --header-height: 90px;
+  --header-height: 105px;
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -198,7 +198,7 @@ body {
 }
 
 .brand img {
-  height: 52px;
+  height: 75px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -1420,7 +1420,7 @@ textarea {
 }
 
 .intro-logo {
-  max-width: 320px;
+  max-width: 420px;
   height: auto;
   object-fit: contain;
   animation: introLogoFade 1.6s ease-in-out infinite alternate;
