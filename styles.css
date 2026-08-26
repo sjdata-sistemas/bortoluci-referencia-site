@@ -1450,8 +1450,9 @@ textarea {
 
 .intro-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--acid);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 12px;
