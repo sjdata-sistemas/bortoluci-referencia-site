@@ -1,3 +1,8 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Arquivos-fonte enviados pelo cliente (não versionar — são pesados)
+IMG_*.MOV
+IMG_*.mov
+hino dos bailes.png

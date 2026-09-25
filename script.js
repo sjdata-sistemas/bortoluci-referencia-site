@@ -202,29 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Hero — Rotação Contínua de Vídeos do Canal @bortolucireferencia (Sem Imagens)
+  // 5. Hero — Vídeo oficial em alta definição, loop contínuo
   const heroVideo = document.getElementById('hero-video');
-  const heroVideoSource = document.getElementById('hero-video-source');
 
-  if (heroVideo && heroVideoSource) {
-    const videoReel = [
-      { src: 'assets/hero-bortoluci-1.mp4', type: 'video/mp4' },
-      { src: 'assets/hero-lovefunk.mp4',    type: 'video/mp4' },
-      { src: 'assets/hero-bortoluci-2.mp4', type: 'video/mp4' },
-      { src: 'assets/hero-gr6.webm',        type: 'video/webm' }
-    ];
-    let currentIndex = 0;
-
-    function playNextVideo() {
-      currentIndex = (currentIndex + 1) % videoReel.length;
-      const next = videoReel[currentIndex];
-      heroVideoSource.setAttribute('src', next.src);
-      heroVideoSource.setAttribute('type', next.type);
-      heroVideo.load();
-      heroVideo.play().catch(() => {});
-    }
-
-    heroVideo.removeAttribute('loop');
-    heroVideo.addEventListener('ended', playNextVideo);
+  if (heroVideo) {
+    // Alguns navegadores móveis bloqueiam o autoplay até haver interação.
+    const tentarTocar = () => heroVideo.play().catch(() => {});
+    tentarTocar();
+    document.addEventListener('touchstart', tentarTocar, { once: true });
+    document.addEventListener('click', tentarTocar, { once: true });
   }
 });

@@ -80,7 +80,7 @@ body {
 
 .eyebrow {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-size: 0.88rem;
   font-weight: 900;
   letter-spacing: 0.05em;
   color: var(--gold) !important;
@@ -478,6 +478,7 @@ body {
   font-weight: 900;
   color: var(--acid);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -804,7 +805,11 @@ body {
 }
 
 .spotlight .section-title span {
-  color: var(--orange);
+  color: var(--gold);
+  background: var(--ink);
+  padding: 0 0.12em 0.04em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .spotlight .btn-ink {
@@ -1118,8 +1123,8 @@ body {
 }
 
 .contact .eyebrow {
-  color: var(--ink);
-  opacity: 0.85;
+  color: var(--ink) !important;
+  opacity: 1;
 }
 
 .contact .section-title {
@@ -1514,7 +1519,7 @@ textarea {
 .cerimonialistas .eyebrow,
 .about-company .eyebrow {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-size: 0.88rem;
   font-weight: 900;
   letter-spacing: 0.05em;
   color: var(--gold) !important;
