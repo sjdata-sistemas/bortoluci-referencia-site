@@ -1249,23 +1249,18 @@ textarea {
 .site-footer {
   padding: 52px 5vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr auto;
+  gap: 20px 40px;
   align-items: flex-end;
   background: var(--ink);
   border-top: 1px solid var(--line);
 }
 
-.footer-brand img {
-  width: 150px;
-  max-height: 48px;
-  object-fit: contain;
-}
-
 .footer-links {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .footer-links a {
